@@ -152,7 +152,7 @@ setup_conda_env() {
         '' > ${CONDA_PREFIX}/etc/conda/deactivate.d/unsetenv.sh
     # install some extra dependencies
     echo -e "[INFO] Installing extra dependencies (this might take a few minutes)..."
-    conda install -c conda-forge -y importlib_metadata &> /dev/null
+    mamba install -c conda-forge -y importlib_metadata #&> /dev/null
     # deactivate the environment
     conda deactivate
     # add information to the user about alias
